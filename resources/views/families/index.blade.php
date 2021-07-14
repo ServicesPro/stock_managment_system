@@ -32,10 +32,10 @@
                 }).then((result) => {
                 if (result.isConfirmed) {
                     $('#'+formId).submit()
-
+                    
                     swalWithBootstrapButtons.fire(
                     'Suppression!',
-                    'La catégorie a bien été supprimé.',
+                    'La famille a bien été supprimé.',
                     'success'
                     )
                 } else if (
@@ -61,16 +61,16 @@
 
 @section('content')
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">Catégories</h1>
+    <h1 class="h3 mb-4 text-gray-800">Familles</h1>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Liste des catégories</h6> <br>
+            <h6 class="m-0 font-weight-bold text-primary">Liste des familles</h6> <br>
 
-            <a href="{{ route('categories.create') }}" class="btn btn-primary btn-icon-split">
+            <a href="{{ route('families.create') }}" class="btn btn-primary btn-icon-split">
                 <span class="icon text-white-50">
                     <i class="fas fa-plus"></i>
                 </span>
-                <span class="text">Ajouter une catégorie</span>
+                <span class="text">Ajouter une famille</span>
             </a><br><br>
 
         </div>
@@ -92,20 +92,20 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        @if ($categories)
-                            @foreach ($categories as $key => $item)
+                        @if ($families)
+                            @foreach ($families as $key => $item)
                                 <tr>
                                     <td># {{ ++$key }}</td>
                                     <td>{{ $item->name }}</td>
                                     <td>
-                                        <a href="{{ route('categories.edit', $item) }}" class="btn btn-primary">
+                                        <a href="{{ route('families.edit', $item) }}" class="btn btn-primary">
                                             <i class="fas fa-edit mr-1"></i> Modifier
                                         </a>
-                                        <a onclick="event.preventDefault()" data-form-id="category-{{ $item->id }}" href="{{ route('categories.destroy', $item) }}" class="btn btn-danger sa-delete">
+                                        <a onclick="event.preventDefault()" data-form-id="family-{{ $item->id }}" href="{{ route('families.destroy', $item) }}" class="btn btn-danger sa-delete">
                                             <i class="fas fa-trash mr-1"></i> Supprimer
                                         </a>
 
-                                        <form id="category-{{ $item->id }}" method="POST" action="{{ route('categories.destroy', $item) }}">
+                                        <form id="family-{{ $item->id }}" method="POST" action="{{ route('families.destroy', $item) }}">
                                             @csrf
                                             @method("DELETE")
                                         </form>
