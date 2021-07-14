@@ -41,7 +41,9 @@
                         <a class="collapse-item" href="{{ route('families.index') }}">Familles</a>
                         <a class="collapse-item" href="{{ route('sizes.index') }}">Tailles</a>
                         <a class="collapse-item" href="{{ route('colors.index') }}">Couleurs</a>
-                        <a class="collapse-item" href="{{ route('rays.index') }}">Rayons</a>
+                        <a class="collapse-item" href="{{ route('cities.index') }}">Villes</a>
+                        <a class="collapse-item" href="{{ route('suppliers.index') }}">Fournisseurs</a>
+                        <a class="collapse-item" href="{{ route('products.index') }}">Articles</a>
                     </div>
                 </div>
             </li>

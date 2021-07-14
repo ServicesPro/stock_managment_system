@@ -1,11 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CityController;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FamilyController;
-use App\Http\Controllers\SizeController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RayController;
+use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\SizeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,4 +38,10 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::resource('colors', ColorController::class);
     // RAY
     Route::resource('rays', RayController::class);
+    // CITY
+    Route::resource('cities', CityController::class);
+    // SUPPLIER
+    Route::resource('suppliers', SupplierController::class);
+    // PRODUCT
+    Route::resource('products', ProductController::class);
 });

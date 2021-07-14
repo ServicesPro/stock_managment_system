@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Color extends Model
+class City extends Model
 {
     use HasFactory;
 
@@ -15,12 +15,12 @@ class Color extends Model
     ];
 
     /**
-     * Get all of the products for the Color
+     * Get all of the suppliers for the City
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function products(): HasMany
+    public function suppliers(): HasMany
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(Supplier::class);
     }
 }
