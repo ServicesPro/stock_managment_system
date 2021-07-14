@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ColorController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FamilyController;
 use App\Http\Controllers\SizeController;
+use App\Http\Controllers\RayController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +31,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::resource('families', FamilyController::class);
     // SIZE
     Route::resource('sizes', SizeController::class);
+    // COLOR
+    Route::resource('colors', ColorController::class);
+    // RAY
+    Route::resource('rays', RayController::class);
 });

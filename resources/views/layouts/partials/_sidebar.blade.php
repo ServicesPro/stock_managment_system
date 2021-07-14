@@ -40,6 +40,8 @@
                         <a class="collapse-item" href="{{ route('categories.index') }}">Catégories</a>
                         <a class="collapse-item" href="{{ route('families.index') }}">Familles</a>
                         <a class="collapse-item" href="{{ route('sizes.index') }}">Tailles</a>
+                        <a class="collapse-item" href="{{ route('colors.index') }}">Couleurs</a>
+                        <a class="collapse-item" href="{{ route('rays.index') }}">Rayons</a>
                     </div>
                 </div>
             </li>
