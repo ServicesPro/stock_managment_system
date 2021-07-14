@@ -39,6 +39,7 @@
                         {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
                         <a class="collapse-item" href="{{ route('categories.index') }}">Catégories</a>
                         <a class="collapse-item" href="{{ route('families.index') }}">Familles</a>
+                        <a class="collapse-item" href="{{ route('sizes.index') }}">Tailles</a>
                     </div>
                 </div>
             </li>

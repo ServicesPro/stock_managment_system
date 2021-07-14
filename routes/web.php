@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FamilyController;
+use App\Http\Controllers\SizeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +27,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::resource('categories', CategoryController::class);
     // FAMILY
     Route::resource('families', FamilyController::class);
+    // SIZE
+    Route::resource('sizes', SizeController::class);
 });
